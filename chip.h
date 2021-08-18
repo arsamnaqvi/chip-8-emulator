@@ -1,4 +1,4 @@
-#include <stdint.h>
+#include <cstdint>
 
 // macros for the class used below
 #define NUM_REG     16
@@ -24,4 +24,8 @@ class chip8 {
         uint8_t keypad[KEYPAD_SIZE]{};
         uint32_t video[VIDMEM_SIZE]{};
         uint16_t opcode;
+
+        chip8();
+        void loadROM(char const* filename);
+
 };
