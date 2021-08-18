@@ -29,7 +29,43 @@ class chip8 {
 
         chip8();
         void loadROM(char const* filename);
-
+        
+        // instructions - opcodes definitions
+        void 00E0();
+        void 00EE();
+        void 1nnn();
+        void 2nnn();
+        void 3xkk();
+        //
+        void 4xkk();
+        void 5xy0();
+        void 6xkk();
+        void 7xkk();
+        void 8xy0();
+        void 8xy1();
+        void 8xy2();
+        void 8xy3();
+        void 8xy4();
+        void 8xy5();
+        void 8xy6();
+        void 8xy7();
+        void 8xyE();
+        void 9xy0();
+        void Annn();
+        void Bnnn();
+        void Cxkk();
+        void Dxyn();
+        void Ex9E();
+        void ExA1();
+        void Fx07();
+        void Fx0A();
+        void Fx15();
+        void Fx18();
+        void Fx1E();
+        void Fx29();
+        void Fx33();
+        void Fx55();
+        void Fx65();
 };
 
 /* 
