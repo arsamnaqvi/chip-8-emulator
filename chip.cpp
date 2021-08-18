@@ -4,7 +4,8 @@
 /* macro to define the address pointed to by the 
  * program counter upon boot time
  */
-#define START_ADDRESS   0x200
+#define START_ADDRESS       0x200
+#define FONT_START_ADDRESS  0x50
 
 /* 
  * chip8 constructor
@@ -15,6 +16,11 @@
 chip8::chip8() {
     // initialize the pc for the system
     pc = START_ADDRESS;
+
+    // initialize the font set data into memory
+    for (int i = 0; i < FONTSET_SIZE; ++i) {
+        memory[FONT_START_ADDRESS + i] = fonntset[i];
+    }
 }
 
 
